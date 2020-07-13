@@ -1,0 +1,25 @@
+{
+  "name": "question_build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "npm run start & npm run client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.23",
+    "body-parser": "latest"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "http-status-codes": "^1.4.0"
+  }
+}
