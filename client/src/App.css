@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+/*body {*/
+/*  margin:0px;*/
+/*  height:100%*/
+/*}*/
+.App {
+  min-height: 100vh;
+  /* Vh Relative to the viewport’s height*!*/
+  /*background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);*/
+  /*text-align: center;*/
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+}
+
+/*.App-header {*/
+/*  background-color: #282c34;*/
+/*  min-height: 100vh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  font-size: calc(10px + 2vmin);*/
+/*  color: white;*/
+/*}*/
+
+/*.App-link {*/
+/*  color: #61dafb;*/
+/*}*/
+
+/*@keyframes App-logo-spin {*/
+/*  from {*/
+/*    transform: rotate(0deg);*/
+/*  }*/
+/*  to {*/
+/*    transform: rotate(360deg);*/
+/*  }*/
+/*}*/
+
+/*question form*/
+
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  margin-top: 6px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  width: 20%;
+}
+label {
+  padding: 12px 12px 12px 0px;
+  display: inline-block;
+  float: left;
+  margin-left: 20%;
+}
+.container {
+  width: 70%;
+  border-radius: 5px;
+  /*background-color: #f2f2f2;*/
+  padding: 20px;
+  align-items: center;
+  /*margin-top: 20px;*/
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.container h2{
+  color: white;
+  font-family: Helvetica;
+  /*margin-left: 20%;*/
+  /*margin-right: 20%;*/
+}
+.container2 {
+  width: 60%;
+  border-radius: 0.5em;
+  box-shadow: 0px 5px 20px rgb(71,71,71);
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container3 {
+  width: 70%;
+  border-radius: 5px;
+  color: white;
+  font:normal 30px Arial,Helvetica,sans-serif;
+
+  /*background-color: #f2f2f2;*/
+  padding: 20px;
+  /*margin-top: 20px;*/
+  margin-left: 20%;
+  margin-right: 30%;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row button{
+  background-color: lightskyblue;
+  color: white;
+  margin-top: 6px;
+  margin-left: 20%;
+  /*margin-right: 20%;*/
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  width: 20%;
+}
+ol{
+margin-top: 0;
+  margin-left: 5%;
+margin-bottom: 2px;
+}
+ol li{
+  padding: 5px;
+  margin-left: 35px;
+  /*margin-right: 0%;*/
+  border-radius: 0.5em;
+  /*display: inline-block;*/
+}
+.singleQ{
+  border-radius:10px;
+  box-shadow: 0px 5px 20px rgb(71,71,71);
+  margin:20px;
+  display: flex;
+  flex-direction: column;
+  /*justify-content:space-around;*/
+  background: white;
+  align-items:flex-start;
+  min-width: 40%;
+}
+.singleQ h3{
+  margin: 1% 0 0 5%;
+  display: inline-block;
+  /*margin-le: 0;*/
+}
+.singleQ h4{
+  margin: 2% 0 0 5%;
+  /*display: inline-block;*/
+  /*margin-le: 0;*/
+}
+.singleQ button{
+  opacity: 0.5;
+  padding :7px 20px;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 1rem;
+  cursor:pointer;
+  background-color: red;
+}
+.singleQ button:hover{
+  opacity: 1;
+}
+ /*responsive*/
+@media screen and (max-width: 600px) {
+  label{
+    margin-left: 1px;
+  }
+ .row button{
+    margin-top: 2px;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .col-25, .col-75, input[type=submit] {
+    margin-top: 2px;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
