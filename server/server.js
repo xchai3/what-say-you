@@ -8,7 +8,7 @@ var http=require('http').Server(app);
 var questionRouter=require('./routers/question');
 var questionModel=require('../server/models/question')
 var questionDAO=require('../server/DAOs/question');
-const port =5000;
+const port =process.env.PORT||5000;
 
 
 
@@ -37,6 +37,6 @@ mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, fun
 app.use('/questions',questionRouter);
 
 // http.listen(port,()=>console.log(`server started on port ${port}`));
-http.listen(5000,function(){
-    console.log('listen on * 5000');
+http.listen(port,function(){
+    console.log(`listen on :${port}`);
 })
