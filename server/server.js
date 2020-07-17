@@ -24,7 +24,7 @@ app.use(cors());
 
 //connect to the database
 const dbUrl = 'mongodb://localhost:27017/question';
-mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, function (err, db) {
+mongoose.connect(process.env.MONGODB_URI||dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, function (err, db) {
     if (err) {
         console.log('database failed');
         return false;
