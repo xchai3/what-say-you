@@ -36,9 +36,10 @@ mongoose.connect(process.env.MONGODB_URI||dbUrl, { useNewUrlParser: true, useUni
 // console.log("hhhh");
 
 //define routers
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('/*', function (req, res) {
+//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
+
 app.use('/questions',questionRouter);
 
 // http.listen(port,()=>console.log(`server started on port ${port}`));
