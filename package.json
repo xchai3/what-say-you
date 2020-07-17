@@ -17,9 +17,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.9.23",
-    "body-parser": "latest"
-  },
-  "devDependencies": {
+    "body-parser": "latest",
     "cors": "^2.8.5",
     "http-status-codes": "^1.4.0"
   }
