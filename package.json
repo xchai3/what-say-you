@@ -10,8 +10,8 @@
     "client2": "npm build --prefix client",
     "client": "npm start --prefix client",
     "dev": "npm run start & npm run client",
-    "build": "npm run start & npm run client2"
-  },
+    "heroku-postbuild":  "NPM_CONFIG_PRODUCTION=false npm install --prefix client  && npm run build --prefix client"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -21,5 +21,8 @@
     "body-parser": "latest",
     "cors": "^2.8.5",
     "http-status-codes": "^1.4.0"
+  },
+  "engines": {
+   "node": "12.14.1"
   }
 }
