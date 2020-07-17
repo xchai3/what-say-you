@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
 import SingleQuestion from "./SingleQuestion";
 
 class  CurrentQuestion extends Component{
@@ -23,7 +22,7 @@ class  CurrentQuestion extends Component{
         },
             body:JSON.stringify(params)
         }).then(response=>{
-            if(response.status==200)
+            if(response.status===200)
                 this.setState({questions:[...this.state.questions.filter(question=>question.description!==description)]});
         });
     };
