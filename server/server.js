@@ -15,7 +15,8 @@ const port =process.env.PORT||5000;
 
 //initial
 // solve parameter passing from client
-app.use(express.static(path.join(__dirname, 'client/build')));
+const clientPath=path.join(__dirname,'../client/build');
+app.use(express.static(clientPath));
 app.use(bodyParser.urlencoded({extend:false}));
 app.use(bodyParser.json());
 
@@ -35,6 +36,9 @@ mongoose.connect(process.env.MONGODB_URI||dbUrl, { useNewUrlParser: true, useUni
 // console.log("hhhh");
 
 //define routers
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 app.use('/questions',questionRouter);
 
 // http.listen(port,()=>console.log(`server started on port ${port}`));
