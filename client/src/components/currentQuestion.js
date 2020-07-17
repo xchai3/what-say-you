@@ -6,7 +6,6 @@ class  CurrentQuestion extends Component{
 
     componentDidMount() {
         //load all questions
-        console.log("2333");
         fetch('/questions').then(res=>res.json())
             .then(questions=>this.setState({questions},()=>console.log('questions fetch',questions)));
     }
