@@ -11,7 +11,10 @@ router.get('/', async (req,res)=>{
     const questions= await questionDAO.findAll();
     // console.log("questions",questions);
     //json 发送Array 或者Object
-    res.json(questions);
+    console.log("questions",questions);
+    if(questions.length!==0) {
+        await res.json(questions);
+    }
 });
 
 
