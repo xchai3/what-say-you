@@ -24,6 +24,14 @@ class questionDAO{
         //1 means deleted one , 0 means not found
         return res.deletedCount;
     }
+    /************* find one questions ******************/
+
+    static async findOptions(code){
+        return questionModel.find({ description: code },
+            {answers: 1})
+            .collation({ locale: 'en_US' })
+            .sort({  description: 1 });
+    }
 }
 
 module.exports=questionDAO;

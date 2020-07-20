@@ -5,13 +5,24 @@ var HttpStatus=require('http-status-codes');
 module.exports=router;   //分开用router一定要 export
 
 
-/***retrieve all questions ****/
+/***retrieve all questions  or a single one ****/
 router.get('/', async (req,res)=>{
     // const todos=["ABC","DEF"];
-    const questions= await questionDAO.findAll();
-    // console.log("questions",questions);
-    //json 发送Array 或者Object
-    console.log("questions",questions);
+    const { contain } = req.query;
+    console.log("contain",contain);
+    let questions;
+    if(contain){
+        questions= await questionDAO.findOptions(contain);
+        console.log("this",questions);
+        // console.log(typeof(questions));
+        // console.log("single ",questions.answers);
+    }
+    else {
+         questions = await questionDAO.findAll();
+        // console.log("questions",questions);
+        //json 发送Array 或者Object
+        // console.log("questions", questions);
+    }
     if(questions.length!==0) {
         await res.json(questions);
     }
@@ -46,3 +57,4 @@ router.delete('/:description', async (req,res)=>{
     else
         res.status(HttpStatus.BAD_REQUEST).send();
 });
+
