@@ -65,8 +65,8 @@ function SingleResult(props) {
                         <PieHooks
                             data={data}
                             content={options}
-                            width={1000}
-                            height={1000}
+                            width={400}
+                            height={200}
                             innerRadius={60}
                             outerRadius={100}
                         />
