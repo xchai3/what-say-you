@@ -48,8 +48,9 @@ function SingleResult(props) {
             {/*<div>*/}
             {/*    <button onClick={changeData}>Transform</button>*/}
             {/*</div>*/}
-            <div>
-                <h4 className="label">{props.title}</h4>
+            <div
+                className="Pie"
+            >
                 {/*<ol>*/}
                 {/*    {*/}
                 {/*        options.map((option,index)=>(*/}
@@ -60,18 +61,24 @@ function SingleResult(props) {
                 {/*        ))*/}
                 {/*    }*/}
                 {/*</ol>*/}
-                <div>
+
                     {   loading?<h2>loadding</h2>:
+                        <div>
+                            <h4
+                                className="label"
+                                style={{padding:'20px'}}
+                            >{props.title}</h4>
                         <PieHooks
                             data={data}
                             content={options}
                             width={400}
-                            height={200}
+                            height={300}
                             innerRadius={60}
                             outerRadius={100}
                         />
+                        </div>
                     }
-                </div>
+
             </div>
         </>
     );

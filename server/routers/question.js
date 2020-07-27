@@ -24,7 +24,11 @@ router.get('/', async (req,res)=>{
         // console.log("questions", questions);
     }
     if(questions.length!==0) {
-        await res.json(questions);
+        await  res.status(HttpStatus.OK).json(questions);
+        // res.status(HttpStatus.OK).send();
+    }
+    else{
+        res.status(HttpStatus.NOT_FOUND).send();
     }
 });
 

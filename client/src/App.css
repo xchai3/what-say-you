@@ -40,15 +40,81 @@
 /*}*/
 
 /*question form*/
+.container {
+  border-radius: 5px;
+  /*background-color: #f2f2f2;*/
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /*margin-top: 20px;*/
+  /*margin-left: 20%;*/
+  /*margin-right: 20%;*/
+}
+.container h2{
+  color: white;
+  font-family: Helvetica;
+  /*margin-left: 20%;*/
+  /*margin-right: 44%;*/
+  display: inline-block;
+}
+.container button{
+  background-color:white;
+  color:palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 0.5em;
+}
+.container form{
+  min-height:10vh;
+  /*//将对象作为弹性伸缩盒显示*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-input[type=text] {
+}
+.container input[type=text]{
+  width:50%;
+  border:none;
+  padding:10px;
+}
+.container input[type=submit]{
+  background: lightcoral;
+  border :none;
+  padding:10px 20px;
+  /*color 表示字体的颜色*/
+  color:white;
+}
+.container h3{
+  color: white;
+  margin-right: 3%;
+  display: inline-block;
+}
+ul{
+  margin-left: 25%;
+  color: white;
+  text-align: left;
+}
+.container2 {
+  width: 60%;
+  border-radius: 0.5em;
+  box-shadow: 0px 5px 20px rgb(71,71,71);
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container2 input[type=text] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
 }
-input[type=submit] {
+.container2 input[type=submit] {
   background-color: #4CAF50;
   color: white;
   margin-top: 6px;
@@ -61,49 +127,32 @@ input[type=submit] {
   float: right;
   width: 20%;
 }
-label {
+.container2 label {
   padding: 12px 12px 12px 0px;
   display: inline-block;
   float: left;
   margin-left: 20%;
 }
-.container {
-  width: 70%;
-  border-radius: 5px;
-  /*background-color: #f2f2f2;*/
-  padding: 20px;
-  align-items: center;
-  /*margin-top: 20px;*/
-  margin-left: 20%;
-  margin-right: 20%;
-}
-.container h2{
-  color: white;
-  font-family: Helvetica;
-  /*margin-left: 20%;*/
-  /*margin-right: 20%;*/
-}
-.container2 {
-  width: 60%;
-  border-radius: 0.5em;
-  box-shadow: 0px 5px 20px rgb(71,71,71);
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
 .container3 {
-  width: 70%;
+  /*width: 70%;*/
   border-radius: 5px;
   color: white;
   font:normal 30px Arial,Helvetica,sans-serif;
-
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   /*background-color: #f2f2f2;*/
   padding: 20px;
   /*margin-top: 20px;*/
-  margin-left: 20%;
-  margin-right: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.Pie{
+  color: white;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  display: inline-block;
 }
 .col-25 {
   float: left;
@@ -116,8 +165,6 @@ label {
   width: 75%;
   margin-top: 6px;
 }
-
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -152,16 +199,20 @@ ol li{
 .singleQ{
   border-radius:10px;
   box-shadow: 0px 5px 20px rgb(71,71,71);
-  margin:20px;
+  /*margin:20px;*/
   display: flex;
   flex-direction: column;
   /*justify-content:space-around;*/
   background: white;
   align-items:flex-start;
   min-width: 40%;
+  margin-top: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 .singleQ h3{
-  margin: 1% 0 0 5%;
+  color: black;
+  margin: 0.2% 0 0 5%;
   display: inline-block;
   /*margin-le: 0;*/
 }
@@ -171,6 +222,7 @@ ol li{
   /*margin-le: 0;*/
 }
 .singleQ button{
+  color: black;
   opacity: 0.5;
   padding :7px 20px;
   display: inline-block;
@@ -182,6 +234,8 @@ ol li{
 .singleQ button:hover{
   opacity: 1;
 }
+
+
  /*responsive*/
 @media screen and (max-width: 600px) {
   label{
@@ -198,5 +252,8 @@ ol li{
     width: 100%;
     margin-right: 0;
     margin-left: 0;
+  }
+  .container h2{
+    margin-right: 10%;
   }
 }

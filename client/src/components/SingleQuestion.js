@@ -8,7 +8,7 @@ function SingleQuestion(props) {
         <div className="singleQ">
             <button
             name={props.description}
-            onClick={props.onDelte}
+            onClick={props.onDelete}
             >x</button>
             <h3>Question No{id+1}:</h3>
             <h4>{description}</h4>

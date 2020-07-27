@@ -1,13 +1,24 @@
 import React, {Component} from 'react';
 import SingleQuestion from "./SingleQuestion";
+import {Link} from "react-router-dom";
 
 class  CurrentQuestion extends Component{
     state={questions:[]};
-
     componentDidMount() {
         //load all questions
-        fetch('/questions').then(res=>res.json())
-            .then(questions=>this.setState({questions},()=>console.log('questions fetch',questions)));
+    //     fetch('/questions').then(res=>res.json())
+    //         .then(
+    //             questions=>this.setState({questions},()=>console.log('questions fetch',questions))
+    // );
+        fetch('/questions')
+            .then(response=>{
+                console.log(response);
+                console.log("yeah");
+                console.log(response.result);
+                if(response.status===200){
+                    response.json().then(questions=>this.setState({questions},()=>console.log('questions fetch',questions)));
+                }
+            });
     }
     onDelete=(e)=>{
     console.log("delete ",e.target.name);
@@ -31,6 +42,10 @@ class  CurrentQuestion extends Component{
         // <div>
             <div className="container">
             <h2> Questions in the database</h2>
+                <button
+                    onClick={()=>this.props.history.push("/users")}
+                >Check & Send to users
+                </button>
             {
                 this.state.questions.map((question,index)=>{
                     return(
@@ -40,7 +55,7 @@ class  CurrentQuestion extends Component{
                     name={question.description}
                     description={question.description}
                     answers={question.answers}
-                    onDelte={this.onDelete}
+                    onDelete={this.onDelete}
                     />
                     )
             })

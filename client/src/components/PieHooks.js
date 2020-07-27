@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import Tooltip from '@material-ui/core/Tooltip';
 import * as d3 from "d3";
 
 const Pie = props => {
@@ -16,15 +17,6 @@ const Pie = props => {
     const format = d3.format("2");
 
 
-    const Tooltip = d3.select("#path")
-        .append("div")
-        .style("opacity", 0)
-        .attr("class", "tooltip")
-        .style("background-color", "white")
-        .style("border", "solid")
-        .style("border-width", "2px")
-        .style("border-radius", "5px")
-        .style("padding", "5px")
     var mouseover = function(d) {
         console.log("moved",d.data);
         // Tooltip
@@ -34,6 +26,7 @@ const Pie = props => {
             .style("opacity", 1)
     }
     const mousemove = function(d) {
+         // console.log("mousemove",d);
         // Tooltip
         //     .html("The exact value of<br>this cell is: " + d.value)
         //     .style("left", (d3.mouse(this)[0]+70) + "px")
@@ -61,11 +54,11 @@ const Pie = props => {
             const path = groupWithUpdate
                 .append("path")
                 .merge(groupWithData.select("path.arc"));
-
             path
                 .attr("class", "arc")
                 .attr("d", createArc)
                 .attr("fill", (d, i) => colors(i))
+                .style("opacity", 0.8)
                 .on("mouseover",mouseover)
                 .on("mousemove",mousemove)
                 .on("mouseleave",mouseleave)
@@ -84,8 +77,8 @@ const Pie = props => {
                 .text(d => format(d.value));
 
             //create a legend
-            groupWithData.enter().append("circle").attr("cx",200).attr("cy", function(d,i){ return 10 + i*25}).attr("r", 10).style("fill", function(d,i){ return colors(i)})
-            groupWithData.enter().append("text").attr("x", 220).attr("y", function(d,i){ return 10 + i*25}) .text(function(d){return d.data.content;}).style("font-size", "15px").attr("alignment-baseline","middle");
+            groupWithData.enter().append("circle").attr("cx",150).attr("cy", function(d,i){ return 10 + i*25}).attr("r", 10).style("fill", function(d,i){ return colors(i)})
+            groupWithData.enter().append("text").attr("x", 170).attr("y", function(d,i){ return 10 + i*25}) .text(function(d){return d.data.content;}).style("font-size", "15px").attr("alignment-baseline","middle");
 
 
         },
@@ -93,7 +86,8 @@ const Pie = props => {
     );
 
     return (
-        <svg width={props.width} height={props.height}>
+        <svg
+            width={props.width} height={props.height} style={{padding:'10px'}}>
             <g
                 ref={ref}
                 transform={`translate(${props.outerRadius} ${props.outerRadius})`}

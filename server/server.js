@@ -6,7 +6,8 @@ var bodyParser = require('body-parser');
 var cors=require('cors');
 var http=require('http').Server(app);
 var questionRouter=require('./routers/question');
-var resultRouter=require('./routers/result')
+var resultRouter=require('./routers/result');
+var emailRouter=require('./routers/email');
 var questionModel=require('../server/models/question')
 var questionDAO=require('../server/DAOs/question');
 const port =process.env.PORT||5000;
@@ -40,6 +41,7 @@ mongoose.connect(process.env.MONGODB_URI||dbUrl, { useNewUrlParser: true, useUni
 
 app.use('/questions',questionRouter);
 app.use('/results',resultRouter);
+app.use('/emails',emailRouter);
 // http.listen(port,()=>console.log(`server started on port ${port}`));
 http.listen(port,function(){
     console.log(`listen on :${port}`);

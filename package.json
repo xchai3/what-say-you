@@ -9,8 +9,8 @@
     "start": "node server/server.js",
     "client": "npm start --prefix client",
     "dev": "npm run start & npm run client",
-    "heroku-postbuild":  "cd client && npm install && npm run build"
-},
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,9 +19,11 @@
     "mongoose": "^5.9.23",
     "body-parser": "latest",
     "cors": "^2.8.5",
-    "http-status-codes": "^1.4.0"
+    "http-status-codes": "^1.4.0",
+    "@material-ui/core": "^4.11.0",
+    "mailgun-js": "^0.22.0"
   },
   "engines": {
-   "node": "12.14.1"
+    "node": "12.14.1"
   }
 }
