@@ -147,6 +147,9 @@ ul{
   margin-left: 10%;
   margin-right: 10%;
 }
+.container3 p{
+  text-align: left;
+}
 .Pie{
   color: white;
   display: flex;

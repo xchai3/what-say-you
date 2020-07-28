@@ -5,8 +5,9 @@ export default function About() {
         <React.Fragment>
             <div className="container3">
             <h1>About</h1>
-            <p>This is part of the "what say you" project.
-            You can use this app to build questions</p>
+            <p>This is the "what say you" project.</p>
+            <p>You can use this app to build polling questions and send them to users.</p>
+                <p>Users' response is visualized via D3.js under "Check result" section.</p>
             </div>
         </React.Fragment>
     )
