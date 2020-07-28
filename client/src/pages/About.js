@@ -7,7 +7,7 @@ export default function About() {
             <h1>About</h1>
             <p>This is the "what say you" project.</p>
             <p>You can use this app to build polling questions and send them to users.</p>
-                <p>Users' response is visualized via D3.js under "Check result" section.</p>
+                <p>Users' response is visualized via D3.js under "Check Results" section.</p>
             </div>
         </React.Fragment>
     )

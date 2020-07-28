@@ -7,7 +7,7 @@ function Header(){
             <br/>
             <Link style={linkStyle} to="/"> Current Question</Link> |
             <Link style={linkStyle} to="/newQuestion"> New Question</Link> |
-            <Link style={linkStyle} to="/result"> Check results</Link> |
+            <Link style={linkStyle} to="/result"> Check Results</Link> |
             <Link style={linkStyle} to="/about"> About</Link>
         </header>
     )
