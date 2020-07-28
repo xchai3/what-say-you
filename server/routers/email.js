@@ -5,7 +5,7 @@ var HttpStatus=require('http-status-codes');
 module.exports=router;
 
 
-const api_key = '54dbaf9a608d7d10eea5d612640825f7-ed4dc7c4-5691592c';
+const api_key = 'key-86aabf33d79bf651c611dc491b59cdf2';
 const domain = 'esnsa5.email';
 const mailgun = require('mailgun-js')({ apiKey: api_key, domain });
 
