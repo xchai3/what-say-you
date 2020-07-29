@@ -153,11 +153,40 @@ ul{
 }
 .Pie{
   color: white;
+  margin-top: 5px;
+  min-width: 50%;
+  min-height: 40%;
   display: flex;
   flex-wrap:wrap;
-  justify-content:space-around;
+  text-align: left;
+  justify-content:center;
+  padding-right: 1%;
   display: inline-block;
 }
+.Pie button{
+  /*position: absolute;*/
+  float: left;
+  color: black;
+  opacity: 0.1;
+  padding :7px 20px;
+  display: inline-block;
+  margin-top: 1%;
+  margin-right: 4px;
+  /*margin-left: 20px;*/
+  border-radius: 1rem;
+  cursor:pointer;
+  background-color: red;
+}
+.Pie button:hover{
+  opacity: 1;
+}
+.Pie h4{
+  overflow: hidden;
+  /*position: absolute;*/
+  /*margin-left: 1%;*/
+  /*display: inline;*/
+}
+
 .col-25 {
   float: left;
   width: 25%;
@@ -189,8 +218,9 @@ ul{
   width: 20%;
 }
 ol{
+  /*background-color: orange;*/
 margin-top: 0;
-  margin-left: 5%;
+  margin-left: 10%;
 margin-bottom: 2px;
 }
 ol li{
@@ -204,25 +234,29 @@ ol li{
   border-radius:10px;
   box-shadow: 0px 5px 20px rgb(71,71,71);
   /*margin:20px;*/
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
+  padding-bottom: 4px;
   /*justify-content:space-around;*/
   background: white;
   align-items:flex-start;
+  text-align: left;
   min-width: 40%;
   margin-top: 20px;
   margin-left: 20%;
   margin-right: 20%;
 }
 .singleQ h3{
+  /*background-color: #ff0844;*/
   color: black;
-  margin: 0.2% 0 0 5%;
+  margin: 0;
   display: inline-block;
   /*margin-le: 0;*/
 }
 .singleQ h4{
-  margin: 2% 0 0 5%;
-  /*display: inline-block;*/
+  /*background-color: lightskyblue;*/
+  margin: 2% 0 0 2%;
+  display: inline-block;
   /*margin-le: 0;*/
 }
 .singleQ button{
@@ -259,5 +293,8 @@ ol li{
   }
   .container h2{
     margin-right: 10%;
+  }
+  .Pie{
+    min-width: 70%;
   }
 }

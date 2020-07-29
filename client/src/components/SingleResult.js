@@ -20,9 +20,17 @@ function SingleResult(props) {
     // };
     useEffect(
         () => {
-            fetch(`/questions?contain=${props.title}`).then(res=>res.json())
-            .then(answers=>answers.map(answer=>(setOptions(answer.answers)))
-            )
+            fetch(`/questions?contain=${props.title}`)
+                .then(response=>{
+                    if(response.ok){
+                        response.json()
+                        .then(answers=>answers.map(answer=>(setOptions(answer.answers)))
+                        )
+                    }
+                })
+            //     .then(res=>res.json())
+            // .then(answers=>answers.map(answer=>(setOptions(answer.answers)))
+            // // )
         },[]
     );
 
@@ -31,6 +39,7 @@ function SingleResult(props) {
         () => {
             console.log("borrow",options[0]);
             setData([{value:props.op1,content:options[0]},{value: props.op2,content:options[1]},{value:props.op3,content:options[2]}]);
+            //no option content
             if(options[0]){
                 setLoading(false);
             }
@@ -43,31 +52,22 @@ function SingleResult(props) {
     // )
 
     return (
-        <>
-            {/*<div></div>*/}
-            {/*<div>*/}
-            {/*    <button onClick={changeData}>Transform</button>*/}
-            {/*</div>*/}
             <div
                 className="Pie"
             >
-                {/*<ol>*/}
-                {/*    {*/}
-                {/*        options.map((option,index)=>(*/}
-                {/*            <li*/}
-                {/*                key={index}*/}
-                {/*            >{option.answers[2]}*/}
-                {/*            </li>*/}
-                {/*        ))*/}
-                {/*    }*/}
-                {/*</ol>*/}
 
-                    {   loading?<h2>loadding</h2>:
+                    {   loading?<h3>no result yet...</h3>:
                         <div>
                             <h4
-                                className="label"
-                                style={{padding:'20px'}}
-                            >{props.title}</h4>
+                                // className="label"
+                                // style={{padding:'5px'}}
+                            >
+
+                                {props.title}
+                                <button
+                                name={props.title}
+                                onClick={props.onDelete}
+                            >X</button></h4>
                         <PieHooks
                             data={data}
                             content={options}
@@ -80,7 +80,6 @@ function SingleResult(props) {
                     }
 
             </div>
-        </>
     );
 }
 

@@ -87,7 +87,7 @@ const Pie = props => {
 
     return (
         <svg
-            width={props.width} height={props.height} style={{padding:'10px'}}>
+            width={props.width} height={props.height} style={{padding:'10px',margin:'auto',display:'block'}}>
             <g
                 ref={ref}
                 transform={`translate(${props.outerRadius} ${props.outerRadius})`}

@@ -18,6 +18,7 @@ router.get('/', async (req,res)=>{
 
 router.delete('/:description', async (req,res)=>{
     // const todos=["ABC","DEF"];
+    console.log("result delete");
     const {description}=req.body;
     console.log("description",description);
     //deal with the database
