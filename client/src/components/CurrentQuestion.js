@@ -46,6 +46,16 @@ class  CurrentQuestion extends Component{
                     onClick={()=>this.props.history.push("/users")}
                 >Check & Send to users
                 </button>
+                {this.state.questions.length===0 ? <>
+                         <br/>
+                        <h3>No question yet,
+                            <Link style={linkStyle} to="/newQuestion">
+                            create
+                            </Link>
+                                  some and send!
+                        </h3>
+                    </>:
+               <>
             {
                 this.state.questions.map((question,index)=>{
                     return(
@@ -61,10 +71,17 @@ class  CurrentQuestion extends Component{
             })
 
             }
-            {/*</div>*/}
+            </>
+                }
         </div>
     );
     }
+}
+const linkStyle={
+    fontStyle:'italic',
+    color:'black',
+
+    margin:'5px'
 }
 
 export default CurrentQuestion;
