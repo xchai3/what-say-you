@@ -7,7 +7,7 @@ module.exports=router;
 
 
 
-//add your won API key and domain here;
+//add your own API key and domain here;
 // const mailgun = require('mailgun-js')({ apiKey: api_key, domain });
 
 //create a list
