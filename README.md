@@ -7,7 +7,7 @@
 
 # Available Scripts
 In the project directory , you can run the following command to start:</br>
-###`npm install`
+### `npm install`
 Install all required dependencies.
 
 ### `npm run dev`
