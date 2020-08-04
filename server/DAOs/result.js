@@ -33,39 +33,5 @@ class resultDAO{
     }
 
 
-    //increase the option count
-    // static async increaseFirst(description){
-    //     const thisOne= await resultModel.findOne({description});
-    //     const updateStr = { $inc: { op1: 1 } };
-    //     const myquery = {description:thisOne.description};
-    //     const change = await resultModel.findOneAndUpdate(myquery, updateStr);
-    //     if(change){
-    //         return true;
-    //     }
-    //     return false;
-    // }
-    //
-    // static async increaseSec(description){
-    //     const thisOne= await resultModel.findOne({description});
-    //     const updateStr = { $inc: { op2: 1 } };
-    //     const myquery = {description:thisOne.description};
-    //     const change = await resultModel.findOneAndUpdate(myquery, updateStr);
-    //     if(change){
-    //         return true;
-    //     }
-    //     return false;
-    // }
-    //
-    // static async increaseThrid(description){
-    //     const thisOne= await resultModel.findOne({description});
-    //     const updateStr = { $inc: { op3: 1 } };
-    //     const myquery = {description:thisOne.description};
-    //     const change = await resultModel.findOneAndUpdate(myquery, updateStr);
-    //     if(change){
-    //         return true;
-    //     }
-    //     return false;
-    // }
-
 }
 module.exports=resultDAO;

@@ -3,10 +3,7 @@
   margin:0;
   padding:0;
 }
-/*body {*/
-/*  margin:0px;*/
-/*  height:100%*/
-/*}*/
+
 .App {
   min-height: 100vh;
   /* Vh Relative to the viewport’s height*!*/
@@ -14,30 +11,6 @@
   /*text-align: center;*/
   background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
 }
-
-/*.App-header {*/
-/*  background-color: #282c34;*/
-/*  min-height: 100vh;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  font-size: calc(10px + 2vmin);*/
-/*  color: white;*/
-/*}*/
-
-/*.App-link {*/
-/*  color: #61dafb;*/
-/*}*/
-
-/*@keyframes App-logo-spin {*/
-/*  from {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  to {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
-/*}*/
 
 /*question form*/
 .container {
@@ -47,15 +20,10 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  /*margin-top: 20px;*/
-  /*margin-left: 20%;*/
-  /*margin-right: 20%;*/
 }
 .container h2{
   color: white;
   font-family: Helvetica;
-  /*margin-left: 20%;*/
-  /*margin-right: 44%;*/
   display: inline-block;
 }
 .container button{

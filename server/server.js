@@ -8,8 +8,6 @@ var http=require('http').Server(app);
 var questionRouter=require('./routers/question');
 var resultRouter=require('./routers/result');
 var emailRouter=require('./routers/email');
-var questionModel=require('../server/models/question')
-var questionDAO=require('../server/DAOs/question');
 const port =process.env.PORT||5000;
 
 
@@ -35,7 +33,6 @@ mongoose.connect(process.env.MONGODB_URI||dbUrl, { useNewUrlParser: true, useUni
     console.log("Database created");
 });
 
-// console.log("hhhh");
 
 //define routers
 

@@ -5,6 +5,8 @@ var HttpStatus=require('http-status-codes');
 module.exports=router;
 
 
+
+
 //add your won API key and domain here;
 // const mailgun = require('mailgun-js')({ apiKey: api_key, domain });
 
@@ -13,35 +15,6 @@ mailgun.post('/lists', {"address": `sportsID@${domain}`, "description": "What sa
     console.log("create list",body);
 });
 
-// var list = mailgun.lists(`sportsID@${domain}`);
-// var tony = {
-//     subscribed: true,
-//     address: 'xipengc@andrew.cmu.edu',
-//     // name: 'Bob Barr',
-//     // vars: {age: 34}
-// };
-// list.members().create(tony, function (error, data) {
-//     console.log("recipt",data);
-// });
-
-
-// const data = {
-//     from: 'Team<sports@esn.community.org>',
-//     to: `sportsID@${domain}`,
-//     subject: 'What say you',
-//     template: 'quiz'
-// };
-// //  mailgun.messages().send(data, (error, body) => {
-// //     if (error) {
-// //         console.log(error);
-// //         // res.status(503);
-// //         // res.send();
-// //     } else {
-// //         console.log("sent!");
-// //         // res.status(201);
-// //         // res.send();
-// //     }
-// // });
 
 /************* retrieve all emailaddress ****************/
 router.get('/', async (req,res)=>{

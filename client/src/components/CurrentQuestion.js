@@ -6,14 +6,9 @@ class  CurrentQuestion extends Component{
     state={questions:[]};
     componentDidMount() {
         //load all questions
-    //     fetch('/questions').then(res=>res.json())
-    //         .then(
-    //             questions=>this.setState({questions},()=>console.log('questions fetch',questions))
-    // );
         fetch('/questions')
             .then(response=>{
                 console.log(response);
-                console.log("yeah");
                 console.log(response.result);
                 if(response.status===200){
                     response.json().then(questions=>this.setState({questions},()=>console.log('questions fetch',questions)));

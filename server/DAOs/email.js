@@ -1,13 +1,6 @@
 let emailModel =require('../models/email');
 
 class emailDAO{
-    //check if this question has already exist
-    // static  async existOne(description){
-    //     const res= await resultModel.findOne({description});
-    //     if(res)
-    //         return true;
-    //     return false;
-    // }
 
     //insert a new record
     static async insertOne(emailAddress){
