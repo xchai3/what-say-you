@@ -5,8 +5,8 @@ var HttpStatus=require('http-status-codes');
 module.exports=router;
 
 
-
-const mailgun = require('mailgun-js')({ apiKey: api_key, domain });
+//add your won API key and domain here;
+// const mailgun = require('mailgun-js')({ apiKey: api_key, domain });
 
 //create a list
 mailgun.post('/lists', {"address": `sportsID@${domain}`, "description": "What say you"}, function (error, body) {
