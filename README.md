@@ -27,6 +27,7 @@ Run the back-end(Node.js) part of the Application.
 - [Moogoose](https://mongoosejs.com/docs/)
 - [React.js](https://reactjs.org)
 - [Style-components](https://styled-components.com)
+- [Mailgun](https://www.mailgun.com)
 
 
 
