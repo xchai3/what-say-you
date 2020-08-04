@@ -3,10 +3,10 @@
 - This project lets admin  create or delete pulling questions  before sending to other users.
 - The responses from users are visualized via D3.js
 - If you want to run the project locally,please add your own mailgun API and domain.
-- to receive the demo email ,remember to add your email.
+- To receive the demo email ,remember to add your email.
 
 # Available Scripts
-In the project directory , you can run the following command to start:
+In the project directory , you can run the following command to start:</br>
 ###`npm install`
 Install all required dependencies.
 
